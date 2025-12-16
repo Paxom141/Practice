@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Добавить жильца</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Общежитие "Студенческое"</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="residents.html">Проживающие</a></li>
+                    <li><a href="add.html" class="active">Добавить жильца</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h2>Добавить нового жильца</h2>
+            <form id="addResidentForm" onsubmit="addResident(event)">
+                <div class="form-group">
+                    <label for="fullName">ФИО</label>
+                    <input type="text" id="fullName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="room">Комната</label>
+                    <input type="text" id="room" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="university">Университет</label>
+                    <input type="text" id="university" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="checkInDate">Дата заселения</label>
+                    <input type="date" id="checkInDate" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="checkOutDate">Дата выселения (если известно)</label>
+                    <input type="date" id="checkOutDate">
+                </div>
+                
+                <div class="form-actions">
+                    <button type="button" onclick="location.href='residents.html'">Отмена</button>
+                    <button type="submit">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Управление общежитием. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

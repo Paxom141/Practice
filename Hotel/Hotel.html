@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Управление общежитием</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Общежитие "Студенческое"</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Главная</a></li>
+                    <li><a href="residents.html">Проживающие</a></li>
+                    <li><a href="add.html">Добавить жильца</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="dashboard">
+            <div class="stats-card">
+                <h3>Всего проживающих</h3>
+                <p id="total-residents">120</p>
+            </div>
+            <div class="stats-card">
+                <h3>Свободных мест</h3>
+                <p id="free-rooms">15</p>
+            </div>
+            <div class="stats-card">
+                <h3>Заселено сегодня</h3>
+                <p id="today-checkins">2</p>
+            </div>
+        </section>
+
+        <section class="quick-actions">
+            <h2>Быстрые действия</h2>
+            <div class="actions-grid">
+                <button onclick="location.href='add.html'">Добавить жильца</button>
+                <button onclick="location.href='residents.html'">Просмотр списка</button>
+                <button onclick="location.href='report.html'">Сформировать отчет</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Управление общежитием. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

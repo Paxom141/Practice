@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Список проживающих</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Общежитие "Студенческое"</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="residents.html" class="active">Проживающие</a></li>
+                    <li><a href="add.html">Добавить жильца</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <h2>Список проживающих</h2>
+        
+        <div class="search-filter">
+            <input type="text" id="searchInput" placeholder="Поиск по имени...">
+            <select id="roomFilter">
+                <option value="">Все комнаты</option>
+                <option value="101">101</option>
+                <option value="102">102</option>
+                <!-- Другие комнаты -->
+            </select>
+        </div>
+        
+        <table class="residents-table">
+            <thead>
+                <tr>
+                    <th>ФИО</th>
+                    <th>Комната</th>
+                    <th>Телефон</th>
+                    <th>Университет</th>
+                    <th>Дата заселения</th>
+                    <th>Действия</th>
+                </tr>
+            </thead>
+            <tbody id="residentsTableBody">
+                <!-- Данные будут загружаться через JavaScript -->
+                <tr>
+                    <td>Иванов Иван Иванович</td>
+                    <td>101</td>
+                    <td>+7 (123) 456-7890</td>
+                    <td>МГУ</td>
+                    <td>01.09.2023</td>
+                    <td>
+                        <button class="action-btn edit-btn">Изменить</button>
+                        <button class="action-btn delete-btn" onclick="deleteResident('1')">Удалить</button>
+                    </td>
+                </tr>
+                <!-- Другие строки -->
+            </tbody>
+        </table>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Управление общежитием. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
